@@ -1,38 +1,452 @@
-.App {
-  text-align: center;
+.text-search {
+  border: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search {
+  border: 2px solid #525ded;
+  border-radius: 3px;
+  padding: 7px 0px;
+  width: 22rem;
+  font-size: 20px;
+  float: right;
+  color: #525ded;
+  font-family: "Lexend Deca";
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search i {
+  font-weight: 900;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.search input::placeholder {
+  color: #525ded;
+}
+.text-search:focus {
+  border: none;
+  outline: none;
+}
+.quote-text {
+  font-size: 22px;
+  color: #525ded;
+  font-family: "Noto Sans", sans-serif;
+}
+.head-main-text {
+  font-size: 42px;
+  font-weight: 900;
+}
+.head-main-text span,
+.section-head-text span {
+  text-decoration: underline;
+  text-decoration-color: #ffa500;
+  text-decoration-thickness: 7px;
+}
+.head-text {
+  color: #bebebe;
+  font-size: 20px;
+  font-weight: 700;
+}
+.Start {
+  background-color: #525ded;
   color: white;
+  border: none;
+  font-family: "Lexend Deca";
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.button-2 button {
+  border-color: #525ded;
+  padding: 12px;
+  font-size: 20px;
+}
+.Renew {
+  color: #525ded;
+  background-color: white;
+  font-family: "Lexend Deca";
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.Watch p {
+  color: #525ded;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Noto Sans", sans-serif;
+}
+.head-text-para {
+  color: #bebebe;
+  font-size: 21px;
+  width: 50%;
+  margin: 0px auto;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+}
+.play-icon {
+  margin-left: 10px;
+  border-radius: 50%;
+  padding: 4px;
+  border: 3px solid #525ded;
+}
+.section-head-text {
+  font-size: 32px;
+  font-weight: 700;
+}
+.card-img-top {
+  width: 40px;
+}
+/* navbar */
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
+/* .navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 100;
+} */
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu-items {
+  order: 2;
+  display: flex;
+}
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.navbar a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  /* .navbar{
+        opacity: 0.95;
+    } */
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 28px;
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 50px;
+    background: #fff;
+    height: 100vh;
+    width: 100%;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 40px;
+    transition: transform 0.5s ease-in-out;
+    overflow: scroll;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 2.5rem;
+    z-index: -1;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-container input[type="checkbox"]:checked ~ .logo {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .navbar .menu-items li{
+    font-size: 18px;
+  }
+}
+.cards-main a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffa500;
+}
+.card-text {
+  color: #878787;
+  font-size: 18px;
+}
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+.offshore-text {
+  font-size: 21px;
+  font-weight: 600;
+}
+.setup-body {
+  padding: 50px;
+}
+.setup-text {
+  font-size: 20px;
+  color: #878787;
+}
+.payment-text {
+  font-size: 20px;
+  color: #ffff;
+}
+.setup-body a {
+  text-decoration: none;
+}
+.ajman-text {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #525ded;
+  font-weight: 800;
+  font-family: "Noto Sans", sans-serif;
+}
+.price {
+  color: #525ded;
+  font-size: 32px;
+  font-weight: 900;
+}
+.price-second {
+  color: #ffff;
+  font-size: 32px;
+  font-weight: 900;
+}
+.section-3 {
+  font-family: "Noto Sans";
+}
+.company-text {
+  color: #525ded;
+  font-size: 19px;
+  font-weight: 700;
+}
+.list-text {
+  color: #525ded;
+  font-weight: 500;
+  line-height: 2;
+}
+.continue-btn {
+  font-size: 23px;
+  font-weight: 700;
+  color: #525ded;
+  border: 3px solid #525ded;
+  border-radius: 3px;
+  background-color: inherit;
+  padding: 20px 0px;
+}
+.rak-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffff;
+}
+.center-card {
+  background-color: #525ded;
+  border-radius: 5px;
+}
+.list-text i {
+  font-size: 24px;
+}
+.continue-center-btn {
+  font-size: 23px;
+  font-weight: 700;
+  border: 3px solid #ffff;
+  border-radius: 3px;
+  color: #525ded;
+  background-color: #fff;
+  padding: 20px 0px;
+}
+.blog-head {
+  font-size: 23px;
+  font-weight: 800;
+  border-left: 8px solid #525ded;
+  padding: 3px 0px 2px 20px;
+}
+.wifi-img {
+  padding: 20px;
+  border: 2px solid #525ded;
+  border-radius: 4px;
+}
+.wifi-text {
+  font-size: 18px;
+  font-weight: 600;
+}
+.services p {
+  font-size: 23px;
+  font-weight: 800;
+}
+.services ul li {
+  list-style-type: none;
+  font-size: 20px;
+  color: #878787;
+  font-weight: 500;
+  margin-left: -1.5em;
+}
+.user-img {
+  border-radius: 50%;
+  border: 2px solid #525ded;
+  padding: 10px;
+}
+.user-text {
+  font-size: 18px;
+  font-weight: 500;
+}
+.user-sub-text {
+  font-size: 22px;
+  color: #000;
+  font-weight: 700;
+}
+.email-input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: inherit;
+}
+.email-btn{
+  border: none;
+  border-radius: 3px;
+}
+.copy-text p{
+  font-size: 20px;
+  color: #878787;
+}
+@media screen and (max-width: 769px) {
+  .search {
+    width: 100%;
+  }
+  .button-2{
+    justify-content: center;
+  }
+}
+
+.ellipse-1{
+  position: absolute;
+  top: 32%;
+  left: 10%;
+}
+.ellipse-11{
+  position: absolute;
+  top: 44%;
+  right: 26%;
+}
+.ellipse-21{
+  position: absolute;
+  left: 25%;
+}
+.ellipse-20{
+  position: absolute;
+  left: 50%;
+  top: 20%;
+}
+.ellipse-13{
+  left: 30%;
+  position: absolute;
+  top: -10%;
+}
+.group-100{
+  position: absolute;
+    left: -24%;
+    top: -39%;
+}
+@media screen and (max-width: 769px) {
+  .ellipse-1{
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .group-100{
+    display: none;
   }
 }
